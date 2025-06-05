@@ -1,0 +1,92 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #111;
+  scroll-behavior: smooth;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+.nav-container {
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+}
+.nav-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: spin 6s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+}
+.nav-menu li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hero {
+  background: linear-gradient(#ffe600, #ffffff);
+  padding: 150px 20px 80px;
+  text-align: center;
+}
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem;
+}
+.section {
+  padding: 60px 20px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+.gallery img, .responsive-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.quality-list {
+  text-align: left;
+  padding-left: 1.2rem;
+}
+.quality-list li {
+  margin-bottom: 0.5rem;
+}
+footer {
+  background: #222;
+  color: #eee;
+  text-align: center;
+  padding: 1rem;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
